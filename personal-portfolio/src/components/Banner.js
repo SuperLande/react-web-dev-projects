@@ -11,7 +11,7 @@ export const Banner = () => {
   const [text, setText] = useState('');
   const [delta, setDelta] = useState(300 - Math.random() * 100);
   const [index, setIndex] = useState(1);
-  const toRotate = [ "Web Developer", "Web Designer", "UI/UX Designer" ];
+  const toRotate = [ "制作数字形象", "复刻个人声音", "专注前沿克隆技术" ];
   const period = 2000;
 
   useEffect(() => {
@@ -55,10 +55,10 @@ export const Banner = () => {
             <TrackVisibility>
               {({ isVisible }) =>
               <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
-                <span className="tagline">Welcome to my Portfolio</span>
-                <h1>{`Hi! I'm Judy`} <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "Web Developer", "Web Designer", "UI/UX Designer" ]'><span className="wrap">{text}</span></span></h1>
-                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                  <button onClick={() => console.log('connect')}>Let’s Connect <ArrowRightCircle size={25} /></button>
+                <span className="tagline">你好，这里是数智律动</span>
+                <h1>{`与我们一起`} <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "制作数字形象", "复刻个人声音", "专注前沿克隆技术" ]'><span className="wrap">{text}</span></span></h1>
+                  <p>AI克隆技术是一种利用人工智能创建数字信息副本的技术，涵盖了从声音、面部表情到写作风格等方面。这项技术通常使用深度学习算法，如生成对抗网络（GANs）和递归神经网络（RNNs），来分析和复制特定人类特征的数据模式。例如，语音克隆可以通过分析个人的语音样本，生成几乎不可能区分的合成语音。同样，面部克隆技术能够创建逼真的数字化面部动画。在写作领域，AI能够模仿个人的写作风格产生文本。</p>
+                  <button onClick={() => console.log('connect')}>链接未来 <ArrowRightCircle size={25} /></button>
               </div>}
             </TrackVisibility>
           </Col>
