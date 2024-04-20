@@ -3,9 +3,29 @@ import { ProjectCard } from "./ProjectCard";
 import projImg1 from "../assets/img/project-img1.png";
 import projImg2 from "../assets/img/project-img2.png";
 import projImg3 from "../assets/img/project-img3.png";
+import kxl from "../assets/img/kxl.JPG";
+import zq from "../assets/img/zq.JPG";
+import yb from "../assets/img/yb.png";
 import colorSharp2 from "../assets/img/color-sharp2.png";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
+
+const teamMembers = [
+  { name: "叶斌", avatar: yb },
+  { name: "郐欣璐", avatar: kxl },
+  { name: "周庆", avatar: zq }
+];
+
+function TeamMember({ member }) {
+  return (
+      <Col md={4} className="mb-4">
+          <div className="team-member">
+              <img src={member.avatar} alt={member.name} className="img-fluid" />
+              <h3>{member.name}</h3>
+          </div>
+      </Col>
+  );
+}
 
 export const Projects = () => {
 
@@ -64,8 +84,12 @@ export const Projects = () => {
                         }
                       </Row>
                     </Tab.Pane>
-                    <Tab.Pane eventKey="section">
-                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quam, quod neque provident velit, rem explicabo excepturi id illo molestiae blanditiis, eligendi dicta officiis asperiores delectus quasi inventore debitis quo.</p>
+                    <Tab.Pane eventKey="second">
+                        <Row>
+                            {teamMembers.map(member => (
+                                <TeamMember key={member.name} member={member} />
+                            ))}
+                        </Row>
                     </Tab.Pane>
                     <Tab.Pane eventKey="third">
                       <p>私有化AI知识库 & 本地部署形象克隆 & 本地部署声音克隆 正在开发中.</p>
